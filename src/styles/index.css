@@ -1,12 +1,68 @@
+.generalcontainer{
+    display:flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
 
-/* 
+.traffic-light-stick{
+    width: 50px; 
+    height: 100px; 
+    background-color: black; 
+    margin-left: auto;
+    margin-right: auto; 
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.traffic-light{
+    border-radius:1rem;
+    display:inline-block; 
+    background-color: black; 
+    padding:2rem;
+}
+.light{
+    width: 150px; 
+    height: 150px;
+    border-radius: 75%;
+}
 
-*/
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: rgb(215, 218, 12);
+}
+.green{
+    background-color: rgb(12, 150, 12);
+}
+.glow{
+    box-shadow: 0px 0px 9px 4px blue;
+    animation: glow 0.9s linear infinite alternate;
+}
+@keyframes glow {
+    to{
+        box-shadow: 0px 0px 30px 20px blue;
+    } 
+}
+.purple {
+    background-color: purple;
+  }
+
+
+.buttonContainer { 
+    display: flex;
+    flex-direction: column;
+    margin-top: 15rem;
+    margin-left: 5rem
+  }
+  .buttonContainer button{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    padding:1rem;
+  }
+  
+.rodarlosbotones{
+    display:flex;
+    justify-content: center;
+}
+  
