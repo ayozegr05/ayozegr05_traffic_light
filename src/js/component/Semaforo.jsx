@@ -1,20 +1,20 @@
 import React, {useState} from "react";
 
 const Semaforo = () =>{
-const [selectedColor, setSelectedColor] = useState("green");
+const [color, setColor] = useState("green");
 const [extraColor, setExtraColor] = useState(false);
 
 const toggleColor = () => {
-    if (selectedColor === "red") {
-      setSelectedColor("yellow");
-    } else if (selectedColor === "yellow") {
-      setSelectedColor("green");
-    } else if (selectedColor === "green" && extraColor === true) {
-      setSelectedColor("purple");
-    } else if (selectedColor === "green" && extraColor === false){
-      setSelectedColor("red")
-    } else if (selectedColor === "purple") {
-      setSelectedColor("red");
+    if (color === "red") {
+      setColor("yellow");
+    } else if (color === "yellow") {
+      setColor("green");
+    } else if (color === "green" && extraColor === true) {
+      setColor("purple");
+    } else if (color === "green" && extraColor === false){
+      setColor("red")
+    } else if (color === "purple") {
+      setColor("red");
     }
   };
 
@@ -30,10 +30,10 @@ return (
 
         
             <div className="traffic-light">
-                <div onClick={()=>setSelectedColor("red")} className={"light red mb-5" + (selectedColor === "red" ? " glow" : "")}></div>
-                <div onClick={()=>setSelectedColor("yellow")} className={"light yellow mb-5" + (selectedColor === "yellow" ? " glow" : "")}></div>
-                <div onClick={()=>setSelectedColor("green")} className={"light green" + (selectedColor === "green" ? " glow" : "")}></div>
-                {extraColor && (<div onClick={() => setSelectedColor("purple")} className={"light purple mt-5" + (selectedColor === "purple" ? " glow" : "")}></div>)}
+                <div onClick={()=>setColor("red")} className={"light red mb-5" + (color === "red" ? " glow" : "")}></div>
+                <div onClick={()=>setColor("yellow")} className={"light yellow mb-5" + (color === "yellow" ? " glow" : "")}></div>
+                <div onClick={()=>setColor("green")} className={"light green" + (color === "green" ? " glow" : "")}></div>
+                {extraColor && (<div onClick={() => setColor("purple")} className={"light purple mt-5" + (color === "purple" ? " glow" : "")}></div>)}
             </div>
             
             
